@@ -1,0 +1,10 @@
+export async function getTripWeather() {
+  return {
+    kind: "historical",
+    days: [
+      { date: "2027-01-08", label: "Fri, Jan 8", high: 68, low: 48, place: "Anaheim", rain: 0 },
+      { date: "2027-01-09", label: "Sat, Jan 9", high: 70, low: 50, place: "Anaheim", rain: 0 },
+      { date: "2027-01-10", label: "Sun, Jan 10", high: 69, low: 49, place: "Newport Beach", rain: 0 },
+    ]
+  };
+}
