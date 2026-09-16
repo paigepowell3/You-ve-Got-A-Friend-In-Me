@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --glow-ice: #e0f2fe;
+    --glow-plum: #fce7f3;
+    --glow-sky: #bae6fd;
+    --glow-white: #ffffff;
+    
+    --ink: #0f172a;
+    --ink-soft: #475569;
+    --ice: #38bdf8;
+    --ice-deep: #0284c7;
+    --plum: #c026d3;
+    --primary-foreground: #ffffff;
+    --destructive: #ef4444;
+    --input: #f1f5f9;
+    --ring: #38bdf8;
+  }
+  body {
+    @apply bg-slate-50 text-[var(--ink)];
+  }
+}
+
+@layer components {
+  .text-ink { color: var(--ink); }
+  .text-ink-soft { color: var(--ink-soft); }
+  .text-ice-deep { color: var(--ice-deep); }
+  .bg-ice-deep { background-color: var(--ice-deep); }
+  .bg-plum { background-color: var(--plum); }
+  .text-destructive { color: var(--destructive); }
+  .bg-input { background-color: var(--input); }
+  
+  .frost {
+    @apply bg-white/60 backdrop-blur-md border border-white/40 shadow-sm;
+  }
+  .frost-deep {
+    @apply bg-white/80 backdrop-blur-xl border border-white/50 shadow-md;
+  }
+  .frost-inset {
+    @apply bg-white/40 backdrop-blur-sm border border-white/20;
+  }
+  .brand-gradient {
+    background: linear-gradient(135deg, var(--ice-deep), var(--plum));
+  }
+  .text-gradient {
+    background: linear-gradient(135deg, var(--ice-deep), var(--plum));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .numerals-gradient {
+    background: linear-gradient(to bottom, var(--ink), var(--ink-soft));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
